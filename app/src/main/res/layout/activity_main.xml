@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jayden.simpletipcalculator.MainActivity"
+    android:background="#f3ac11">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#625d5d"
+        android:gravity="center"
+        android:text="QTip"
+        android:textColor="#4fb645"
+        android:textSize="12pt"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fffbfb"
+        android:ems="10"
+        android:hint="Total Amount"
+        android:inputType="number"
+        android:layout_margin="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#625d5d"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:id="@+id/radioGroup"
+            android:nestedScrollingEnabled="true">
+
+            <RadioButton
+                android:id="@+id/percent15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="15%"
+                android:textColor="#fefefe"
+                android:textSize="7pt"
+                android:onClick="onClickRadio" />
+
+            <RadioButton
+                android:id="@+id/percent20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="20%"
+                android:textColor="#fefefe"
+                android:textSize="7pt"
+                android:onClick="onClickRadio" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="other:"
+                android:textColor="#fefefe"
+                android:textSize="7pt"
+                android:onClick="onClickRadio" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editOther"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="#020202"
+            android:background="#b7b4b4"
+            android:layout_margin="4dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calculate"
+            android:textColor="#fdfdfd"
+            android:background="#379229"
+            android:layout_margin="7dp"
+            android:onClick="onCalculateButtonClicked" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tip"
+            android:gravity="center_horizontal"
+            android:background="#625d5d"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/total"
+            android:gravity="center_horizontal"
+            android:background="#625d5d"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+
+</LinearLayout>
